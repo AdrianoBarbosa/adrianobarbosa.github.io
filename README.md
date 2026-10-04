@@ -1,6 +1,6 @@
 # adrianobarbosa.github.io
 
-Página pessoal de Adriano Olivares Barbosa, Desenvolvedor Backend Sênior e Fullstack (.NET, Node.js, Python, Go).
+Página pessoal de Adriano Olivares Barbosa, Desenvolvedor Fullstack e Backend Sênior (.NET, Node.js, Python, Go).
 
 **Site:** https://adrianobarbosa.github.io
 
@@ -84,7 +84,7 @@ O workflow `.github/workflows/pages.yml` publica no GitHub Pages a cada push na 
 
 ## English
 
-Personal page of Adriano Olivares Barbosa, Senior Backend and Fullstack Developer.
+Personal page of Adriano Olivares Barbosa, Senior Fullstack and Backend Developer.
 
 - React 19 via CDN (esm.sh) with an import map and htm instead of JSX. No Node.js, no bundler; the Python build only prerenders and generates machine-readable files.
 - Light, dark or system mode, plus Portuguese (`/`) and English (`/en/`).

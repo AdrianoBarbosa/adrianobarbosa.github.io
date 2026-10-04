@@ -93,8 +93,8 @@
     htmlLang: "pt-BR",
     summary: "Desenvolvedor com " + years + " anos de carreira, trabalhando com .NET/C#, Node.js com TypeScript e Python em e-commerce de alto volume. Experiência na construção e manutenção de APIs REST, sistemas distribuídos e processamento assíncrono, com SQL Server, MySQL, Redis, Docker e pipelines de CI/CD no GitHub Actions e AWS, além de monitoramento e observabilidade com Datadog e Grafana. Atualmente desenvolvo o backend de uma plataforma SaaS de gestão em .NET 10 e estudo Go. Incorporo assistentes de IA ao fluxo de desenvolvimento, com revisão crítica do que é gerado. Trabalho orientado a SOLID e Clean Architecture.",
     meta: {
-      title: "Adriano Olivares Barbosa | Desenvolvedor Backend Sênior · .NET, Node.js, Go",
-      description: "Desenvolvedor Backend Sênior e Fullstack com " + years + " anos de carreira em C#/.NET, Node.js/TypeScript, Python e Go. APIs REST, sistemas distribuídos e e-commerce de alto volume. Currículo em PDF, portfólio e contato.",
+      title: "Adriano Olivares Barbosa | Desenvolvedor Fullstack e Backend Sênior · .NET, Node.js, Go",
+      description: "Desenvolvedor Fullstack e Backend Sênior com " + years + " anos de carreira em C#/.NET, Node.js/TypeScript, Python e Go. APIs REST, sistemas distribuídos e e-commerce de alto volume. Currículo em PDF, portfólio e contato.",
     },
     nav: { about: "Sobre", skills: "Stack", experience: "Experiência", projects: "Projetos", articles: "Artigos", contact: "Contato" },
     controls: {
@@ -107,12 +107,12 @@
     hero: {
       status: "Disponível para novas oportunidades",
       greeting: "Olá, eu sou",
-      role: "Desenvolvedor Backend Sênior · Fullstack",
+      role: "Desenvolvedor Fullstack Sênior · Backend",
       tagline: years + " anos construindo APIs, sistemas distribuídos e processamento assíncrono com .NET, Node.js e Python. Hoje mergulhado em Go e escrevendo sobre o que aprendo.",
       ctaContact: "Vamos conversar",
       ctaCv: "Baixar currículo",
       location: "Limeira, SP, Brasil · Remoto ou híbrido",
-      codeRole: "Backend Sênior",
+      codeRole: "Fullstack Sênior",
       codeFocus: ["APIs REST", "Sistemas distribuídos", "Mensageria"],
     },
     stats: [
@@ -248,9 +248,9 @@
     contact: {
       title: "Vamos conversar?",
       kicker: "contato",
-      text: "Estou aberto a oportunidades como Desenvolvedor Backend ou Fullstack Sênior, remoto ou híbrido. Mande um e-mail ou me chame no LinkedIn.",
+      text: "Estou aberto a oportunidades como Desenvolvedor Fullstack ou Backend Sênior, remoto ou híbrido. Mande um e-mail ou me chame no LinkedIn.",
       rolesTitle: "Cargos de interesse",
-      roles: ["Desenvolvedor Backend Sênior", "Desenvolvedor Full Stack Sênior", "Engenheiro de Software", "Analista de Desenvolvimento Sênior"],
+      roles: ["Desenvolvedor Full Stack Sênior", "Desenvolvedor Backend Sênior", "Engenheiro de Software", "Analista de Desenvolvimento Sênior"],
       availabilityTitle: "Disponibilidade",
       availability: "Início imediato · Remoto ou híbrido (Limeira, SP)",
       cvTitle: "Currículo em PDF",
@@ -270,8 +270,8 @@
     htmlLang: "en-US",
     summary: "Developer with " + years + " years of experience working with .NET/C#, Node.js with TypeScript and Python in high-volume e-commerce. Experience building and maintaining REST APIs, distributed systems and asynchronous processing, with SQL Server, MySQL, Redis, Docker and CI/CD pipelines on GitHub Actions and AWS, as well as monitoring and observability with Datadog and Grafana. Currently developing the backend of a SaaS management platform in .NET 10 and studying Go. I bring AI assistants into the development workflow, always critically reviewing what is generated. My work is guided by SOLID and Clean Architecture.",
     meta: {
-      title: "Adriano Olivares Barbosa | Senior Backend Developer · .NET, Node.js, Go",
-      description: "Senior Backend and Fullstack Developer (Software Engineer) with " + years + " years of experience in C#/.NET, Node.js/TypeScript, Python and Go. REST APIs, distributed systems and high-volume e-commerce. PDF resume, portfolio and contact.",
+      title: "Adriano Olivares Barbosa | Senior Fullstack and Backend Developer · .NET, Node.js, Go",
+      description: "Senior Fullstack and Backend Developer (Software Engineer) with " + years + " years of experience in C#/.NET, Node.js/TypeScript, Python and Go. REST APIs, distributed systems and high-volume e-commerce. PDF resume, portfolio and contact.",
     },
     nav: { about: "About", skills: "Stack", experience: "Experience", projects: "Projects", articles: "Articles", contact: "Contact" },
     controls: {
@@ -284,12 +284,12 @@
     hero: {
       status: "Open to new opportunities",
       greeting: "Hi, I'm",
-      role: "Senior Backend Developer · Fullstack",
+      role: "Senior Fullstack Developer · Backend",
       tagline: years + " years building APIs, distributed systems and asynchronous processing with .NET, Node.js and Python. Now diving deep into Go and writing about what I learn.",
       ctaContact: "Let's talk",
       ctaCv: "Download resume",
       location: "Limeira, SP, Brazil · Remote or hybrid",
-      codeRole: "Senior Backend",
+      codeRole: "Senior Fullstack",
       codeFocus: ["REST APIs", "Distributed systems", "Messaging"],
     },
     stats: [
@@ -425,9 +425,9 @@
     contact: {
       title: "Let's talk?",
       kicker: "contact",
-      text: "I'm open to Senior Backend or Fullstack Developer roles, remote or hybrid. Send me an email or reach out on LinkedIn.",
+      text: "I'm open to Senior Fullstack or Backend Developer roles, remote or hybrid. Send me an email or reach out on LinkedIn.",
       rolesTitle: "Target roles",
-      roles: ["Senior Backend Developer", "Senior Full Stack Developer", "Software Engineer", "Senior Backend Engineer"],
+      roles: ["Senior Full Stack Developer", "Senior Backend Developer", "Software Engineer", "Senior Backend Engineer"],
       availabilityTitle: "Availability",
       availability: "Immediate start · Remote or hybrid (Limeira, SP, Brazil)",
       cvTitle: "PDF resume",

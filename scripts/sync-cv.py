@@ -11,13 +11,13 @@ from pypdf import PdfReader, PdfWriter
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT.parent.parent / "resumes"
-KEYWORDS = "Senior Backend Developer, Full Stack, Software Engineer, C#, .NET, ASP.NET Core, Node.js, TypeScript, NestJS, Python, Go, REST APIs, Distributed Systems, SQL Server, MySQL, Redis, Docker, AWS, GitHub Actions"
+KEYWORDS = "Senior Full Stack Developer, Backend, Software Engineer, C#, .NET, ASP.NET Core, Node.js, TypeScript, NestJS, Python, Go, REST APIs, Distributed Systems, SQL Server, MySQL, Redis, Docker, AWS, GitHub Actions"
 
 FILES = [
     ("Adriano Olivares Barbosa.pdf", "Adriano-Olivares-Barbosa-CV-pt-BR.pdf",
-     "Adriano Olivares Barbosa | Currículo | Desenvolvedor Backend Sênior", "Currículo de Desenvolvedor Backend e Full Stack Sênior"),
+     "Adriano Olivares Barbosa | Currículo | Desenvolvedor Full Stack Sênior", "Currículo de Desenvolvedor Full Stack e Backend Sênior"),
     ("Adriano.Olivares Barbosa_EN.pdf", "Adriano-Olivares-Barbosa-CV-en-US.pdf",
-     "Adriano Olivares Barbosa | Resume | Senior Backend Developer", "Senior Backend and Full Stack Developer resume"),
+     "Adriano Olivares Barbosa | Resume | Senior Full Stack Developer", "Senior Full Stack and Backend Developer resume"),
 ]
 
 for src_name, out_name, title, subject in FILES:
