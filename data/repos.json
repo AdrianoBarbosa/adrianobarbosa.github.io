@@ -1,0 +1,163 @@
+{
+  "generatedAt": "2026-10-04T07:18:21Z",
+  "owner": "AdrianoBarbosa",
+  "repos": [
+    {
+      "description": "",
+      "forks": 0,
+      "homepage": "",
+      "language": "TypeScript",
+      "languages": [
+        "TypeScript",
+        "HTML",
+        "CSS"
+      ],
+      "name": "nextLevelWeek-ecoleta",
+      "pushedAt": "2026-10-04T02:17:54Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/nextLevelWeek-ecoleta"
+    },
+    {
+      "description": "Project created to \"Semana OmniStack 11\"",
+      "forks": 1,
+      "homepage": "",
+      "language": "JavaScript",
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "name": "be-the-hero",
+      "pushedAt": "2026-09-25T00:09:33Z",
+      "stars": 1,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/be-the-hero"
+    },
+    {
+      "description": "Exemplos de cancelamento em Node.js, .NET e Go: AbortSignal, CancellationToken e context.Context",
+      "forks": 0,
+      "homepage": "",
+      "language": "C#",
+      "languages": [
+        "C#",
+        "Go",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "name": "abortsignal-cancellationtoken-context",
+      "pushedAt": "2026-09-18T22:08:07Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/abortsignal-cancellationtoken-context"
+    },
+    {
+      "description": "Exemplos de concorrencia em Node.js, .NET e Go: event loop, async/await e goroutines",
+      "forks": 0,
+      "homepage": "",
+      "language": "C#",
+      "languages": [
+        "C#",
+        "Go",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "name": "event-loop-async-goroutines",
+      "pushedAt": "2026-09-11T22:56:59Z",
+      "stars": 3,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/event-loop-async-goroutines"
+    },
+    {
+      "description": "",
+      "forks": 0,
+      "homepage": "",
+      "language": "HTML",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "name": "site-suelen-gomes-psicologa",
+      "pushedAt": "2024-07-01T16:02:18Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/site-suelen-gomes-psicologa"
+    },
+    {
+      "description": "",
+      "forks": 0,
+      "homepage": "",
+      "language": "HTML",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "name": "codenation-react",
+      "pushedAt": "2023-03-04T14:19:14Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/codenation-react"
+    },
+    {
+      "description": "",
+      "forks": 0,
+      "homepage": "",
+      "language": "CSS",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "name": "site-cleusa-moda-fashion",
+      "pushedAt": "2023-03-04T02:37:26Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/site-cleusa-moda-fashion"
+    },
+    {
+      "description": "Project for studies following \"Next Level Week 3\"",
+      "forks": 0,
+      "homepage": "",
+      "language": "TypeScript",
+      "languages": [
+        "HTML",
+        "TypeScript",
+        "CSS",
+        "JavaScript"
+      ],
+      "name": "nlw3-happy",
+      "pushedAt": "2023-02-27T16:03:09Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/nlw3-happy"
+    },
+    {
+      "description": "",
+      "forks": 0,
+      "homepage": "",
+      "language": "Shell",
+      "languages": [
+        "Shell"
+      ],
+      "name": "setup",
+      "pushedAt": "2022-01-19T14:26:43Z",
+      "stars": 1,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/setup"
+    },
+    {
+      "description": "A simple .Net Core boilerplate",
+      "forks": 0,
+      "homepage": "",
+      "language": "C#",
+      "languages": [
+        "C#"
+      ],
+      "name": "jaspion-dotnet",
+      "pushedAt": "2021-08-22T02:03:58Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/AdrianoBarbosa/jaspion-dotnet"
+    }
+  ]
+}

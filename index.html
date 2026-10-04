@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adriano Barbosa | Desenvolvedor Backend Sênior</title>
+  <meta name="description" content="Desenvolvedor Backend Sênior e Fullstack com 17 anos de carreira em .NET, Node.js, Python e Go. Currículo, portfólio e contato." />
+  <meta name="author" content="Adriano Olivares Barbosa" />
+  <meta name="theme-color" content="#272822" />
+  <link rel="canonical" href="https://adrianobarbosa.github.io/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Adriano Barbosa | Desenvolvedor Backend Sênior" />
+  <meta property="og:description" content=".NET, Node.js, Python e Go. APIs REST, sistemas distribuídos e processamento assíncrono." />
+  <meta property="og:url" content="https://adrianobarbosa.github.io/" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/7115446?v=4&s=640" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/themes.js"></script>
+  <script>
+    // Aplica tema e idioma antes do primeiro paint, evitando o flash de cores.
+    (function () {
+      var mode = "system", lang = null;
+      try { mode = localStorage.getItem("mode") || "system"; lang = localStorage.getItem("lang"); } catch (e) {}
+      window.THEMES.applyTheme(window.SITE_CONFIG.palette, mode);
+      if (!lang) lang = /^pt\b/i.test(navigator.language || "") ? "pt-BR" : "en-US";
+      document.documentElement.lang = lang;
+    })();
+  </script>
+  <script src="assets/js/i18n.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.3.0",
+        "react-dom/client": "https://esm.sh/react-dom@19.3.0/client?external=react",
+        "htm": "https://esm.sh/htm@3.1.1"
+      }
+    }
+  </script>
+  <link rel="modulepreload" href="https://esm.sh/react@19.3.0" />
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+  <div id="root">
+    <noscript>
+      <main style="max-width:640px;margin:4rem auto;padding:0 16px;font-family:sans-serif">
+        <h1>Adriano Olivares Barbosa</h1>
+        <p>Desenvolvedor Backend Sênior · Fullstack (.NET, Node.js, Python, Go)</p>
+        <p><a href="mailto:adriano.barbosa90@gmail.com">adriano.barbosa90@gmail.com</a> ·
+          <a href="https://www.linkedin.com/in/adrianoobarbosa">LinkedIn</a> ·
+          <a href="https://github.com/AdrianoBarbosa">GitHub</a></p>
+      </main>
+    </noscript>
+  </div>
+</body>
+</html>
