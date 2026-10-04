@@ -8,6 +8,7 @@ const { applyTheme } = window.THEMES;
 const I18N = window.I18N;
 
 const LANGS = ["pt-BR", "en-US"];
+const ROUTES = { "pt-BR": "/", "en-US": "/en/" };
 const MODES = ["light", "dark", "system"];
 
 const LANGUAGE_COLORS = {
@@ -29,8 +30,13 @@ function useStoredState(key, initial) {
   return [value, setValue];
 }
 
-function detectLang() {
-  return /^pt\b/i.test(navigator.language || "") ? "pt-BR" : "en-US";
+// O idioma vem da rota: o build gera "/" em pt-BR e "/en/" em en-US.
+function routeLang() {
+  return document.documentElement.lang === "en-US" ? "en-US" : "pt-BR";
+}
+
+function rememberLang(lang) {
+  try { localStorage.setItem("lang", lang); } catch { /* armazenamento indisponível */ }
 }
 
 function formatDate(iso, lang) {
@@ -57,6 +63,10 @@ const ICONS = {
   menu: html`<path d="M4 6h16M4 12h16M4 18h16" />`,
   close: html`<path d="M18 6 6 18M6 6l12 12" />`,
   globe: html`<circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />`,
+  download: html`<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />`,
+  file: html`<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />`,
+  briefcase: html`<rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />`,
+  clock: html`<circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />`,
   grad: html`<path d="M22 10 12 5 2 10l10 5 10-5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" />`,
 };
 
@@ -93,7 +103,7 @@ function Reveal({ as = "div", className = "", delay = 0, children, ...rest }) {
 
 /* ---------- cabeçalho ---------- */
 
-function Header({ t, lang, setLang, mode, setMode }) {
+function Header({ t, lang, mode, setMode }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -113,16 +123,17 @@ function Header({ t, lang, setLang, mode, setMode }) {
           <span class="brand-bracket">${"<"}</span>AB<span class="brand-bracket">${" />"}</span>
         </a>
 
-        <nav id="main-nav" class=${`nav ${open ? "open" : ""}`} aria-label="Principal">
+        <nav id="main-nav" class=${`nav ${open ? "open" : ""}`} aria-label=${t.controls.menu}>
           ${links.map((id) => html`<a key=${id} href=${"#" + id} onClick=${() => setOpen(false)}>${t.nav[id]}</a>`)}
         </nav>
 
         <div class="controls">
           <div class="segmented" role="group" aria-label=${t.controls.language}>
             ${LANGS.map((l) => html`
-              <button key=${l} type="button" aria-pressed=${lang === l} onClick=${() => setLang(l)} title=${l}>
+              <a key=${l} href=${ROUTES[l]} hrefLang=${l} lang=${l} aria-current=${lang === l ? "page" : undefined} title=${l}
+                onClick=${(e) => { rememberLang(l); if (lang !== l) { e.preventDefault(); location.href = ROUTES[l] + location.hash; } }}>
                 ${l.slice(0, 2).toUpperCase()}
-              </button>`)}
+              </a>`)}
           </div>
           <div class="segmented" role="group" aria-label=${t.controls.theme}>
             ${MODES.map((m) => html`
@@ -174,7 +185,7 @@ function CodeWindow({ t }) {
     </div>`;
 }
 
-function Hero({ t }) {
+function Hero({ t, lang }) {
   return html`
     <section id="top" class="hero">
       <div class="hero-glow" aria-hidden="true"></div>
@@ -186,14 +197,14 @@ function Hero({ t }) {
           <//>
           <${Reveal} delay=${60}>
             <p class="greeting mono">${t.hero.greeting}</p>
-            <h1 class="hero-name">${CFG.shortName}<span class="cursor" aria-hidden="true">_</span></h1>
+            <h1 class="hero-name">${CFG.shortName}</h1>
             <p class="hero-role mono">${t.hero.role}</p>
           <//>
           <${Reveal} delay=${120}>
             <p class="hero-tagline">${t.hero.tagline}</p>
             <div class="hero-cta">
               <a class="btn btn-primary" href="#contact"><${Icon} name="mail" />${t.hero.ctaContact}</a>
-              <a class="btn btn-ghost" href="#projects"><${Icon} name="code" />${t.hero.ctaProjects}</a>
+              <a class="btn btn-ghost" href=${CFG.cv[lang]} download type="application/pdf"><${Icon} name="download" />${t.hero.ctaCv}</a>
               <a class="btn btn-icon" href=${CFG.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn"><${Icon} name="linkedin" /></a>
               <a class="btn btn-icon" href=${CFG.github} target="_blank" rel="noopener" aria-label="GitHub"><${Icon} name="github" /></a>
             </div>
@@ -279,17 +290,19 @@ function Experience({ t }) {
         ${t.experience.items.map((job, i) => html`
           <${Reveal} as="li" key=${i} className="timeline-item">
             <span class="timeline-dot" aria-hidden="true"></span>
-            <div class="card job">
+            <article class="card job">
               <div class="job-head">
                 <div>
                   <h3>${job.role}</h3>
                   <p class="job-company">${job.company}</p>
                 </div>
-                <span class="job-period mono">${job.period}</span>
+                <span class="job-period mono">
+                  <time dateTime=${job.start}>${job.period.split(" · ")[0]}</time>${" · "}${job.end ? html`<time dateTime=${job.end}>${job.period.split(" · ")[1]}</time>` : job.period.split(" · ")[1]}
+                </span>
               </div>
               <ul class="job-bullets">${job.bullets.map((b, j) => html`<li key=${j}>${b}</li>`)}</ul>
               <ul class="chips chips-sm">${job.tech.map((x) => html`<li key=${x} class="chip">${x}</li>`)}</ul>
-            </div>
+            </article>
           <//>`)}
       </ol>
     <//>`;
@@ -328,7 +341,7 @@ function Projects({ t, lang }) {
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    fetch("data/repos.json", { cache: "no-cache" })
+    fetch("/data/repos.json", { cache: "no-cache" })
       .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
       .then(setData)
       .catch(() => setError(true));
@@ -407,7 +420,7 @@ function Articles({ t }) {
     <//>`;
 }
 
-function Contact({ t }) {
+function Contact({ t, lang }) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     try {
@@ -428,9 +441,28 @@ function Contact({ t }) {
           </button>
         </div>
         <div class="contact-links">
-          <a class="btn btn-primary" href=${CFG.linkedin} target="_blank" rel="noopener"><${Icon} name="linkedin" />linkedin.com/in/adrianoobarbosa</a>
-          <a class="btn btn-ghost" href=${CFG.github} target="_blank" rel="noopener"><${Icon} name="github" />github.com/${CFG.githubUser}</a>
+          <a class="btn btn-primary" href=${CFG.linkedin} target="_blank" rel="noopener me"><${Icon} name="linkedin" />linkedin.com/in/adrianoobarbosa</a>
+          <a class="btn btn-ghost" href=${CFG.github} target="_blank" rel="noopener me"><${Icon} name="github" />github.com/${CFG.githubUser}</a>
         </div>
+        <dl class="contact-facts">
+          <div>
+            <dt><${Icon} name="briefcase" size=${16} />${t.contact.rolesTitle}</dt>
+            <dd><ul class="chips">${t.contact.roles.map((r) => html`<li key=${r} class="chip">${r}</li>`)}</ul></dd>
+          </div>
+          <div>
+            <dt><${Icon} name="clock" size=${16} />${t.contact.availabilityTitle}</dt>
+            <dd>${t.contact.availability}</dd>
+          </div>
+          <div>
+            <dt><${Icon} name="file" size=${16} />${t.contact.cvTitle}</dt>
+            <dd class="cv-links">
+              ${LANGS.map((l) => html`
+                <a key=${l} class=${`btn btn-sm ${l === lang ? "btn-primary" : "btn-ghost"}`} href=${CFG.cv[l]} download type="application/pdf" hrefLang=${l}>
+                  <${Icon} name="download" size=${16} />${l === "pt-BR" ? t.contact.cvPt : t.contact.cvEn}
+                </a>`)}
+            </dd>
+          </div>
+        </dl>
       <//>
     <//>`;
 }
@@ -448,7 +480,7 @@ function Footer({ t }) {
 /* ---------- app ---------- */
 
 function App() {
-  const [lang, setLang] = useStoredState("lang", detectLang());
+  const lang = routeLang();
   const [mode, setMode] = useStoredState("mode", "system");
   const t = I18N[lang] || I18N["pt-BR"];
 
@@ -461,23 +493,17 @@ function App() {
     return () => mq.removeEventListener("change", onChange);
   }, [mode]);
 
-  useEffect(() => {
-    document.documentElement.lang = t.htmlLang;
-    document.title = t.meta.title;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", t.meta.description);
-  }, [t]);
-
   return html`
     <a class="skip" href="#about">${t.controls.skip}</a>
-    <${Header} t=${t} lang=${lang} setLang=${setLang} mode=${mode} setMode=${setMode} />
+    <${Header} t=${t} lang=${lang} mode=${mode} setMode=${setMode} />
     <main>
-      <${Hero} t=${t} />
+      <${Hero} t=${t} lang=${lang} />
       <${About} t=${t} />
       <${Skills} t=${t} />
       <${Experience} t=${t} />
       <${Projects} t=${t} lang=${lang} />
       <${Articles} t=${t} />
-      <${Contact} t=${t} />
+      <${Contact} t=${t} lang=${lang} />
     </main>
     <${Footer} t=${t} />`;
 }

@@ -91,9 +91,10 @@
 
   const pt = {
     htmlLang: "pt-BR",
+    summary: "Desenvolvedor com " + years + " anos de carreira, trabalhando com .NET/C#, Node.js com TypeScript e Python em e-commerce de alto volume. Experiência na construção e manutenção de APIs REST, sistemas distribuídos e processamento assíncrono, com SQL Server, MySQL, Redis, Docker e pipelines de CI/CD no GitHub Actions e AWS, além de monitoramento e observabilidade com Datadog e Grafana. Atualmente desenvolvo o backend de uma plataforma SaaS de gestão em .NET 10 e estudo Go. Incorporo assistentes de IA ao fluxo de desenvolvimento, com revisão crítica do que é gerado. Trabalho orientado a SOLID e Clean Architecture.",
     meta: {
-      title: "Adriano Barbosa | Desenvolvedor Backend Sênior",
-      description: "Desenvolvedor Backend Sênior e Fullstack com " + years + " anos de carreira em .NET, Node.js, Python e Go. Currículo, portfólio e contato.",
+      title: "Adriano Olivares Barbosa | Desenvolvedor Backend Sênior · .NET, Node.js, Go",
+      description: "Desenvolvedor Backend Sênior e Fullstack com " + years + " anos de carreira em C#/.NET, Node.js/TypeScript, Python e Go. APIs REST, sistemas distribuídos e e-commerce de alto volume. Currículo em PDF, portfólio e contato.",
     },
     nav: { about: "Sobre", skills: "Stack", experience: "Experiência", projects: "Projetos", articles: "Artigos", contact: "Contato" },
     controls: {
@@ -109,7 +110,7 @@
       role: "Desenvolvedor Backend Sênior · Fullstack",
       tagline: years + " anos construindo APIs, sistemas distribuídos e processamento assíncrono com .NET, Node.js e Python. Hoje mergulhado em Go e escrevendo sobre o que aprendo.",
       ctaContact: "Vamos conversar",
-      ctaProjects: "Ver projetos",
+      ctaCv: "Baixar currículo",
       location: "Limeira, SP, Brasil · Remoto ou híbrido",
       codeRole: "Backend Sênior",
       codeFocus: ["APIs REST", "Sistemas distribuídos", "Mensageria"],
@@ -147,6 +148,7 @@
           role: "Desenvolvedor Backend .NET",
           company: "Projeto independente (autônomo)",
           period: "mar. 2026 · Atual",
+          start: "2026-03", end: null,
           bullets: [
             "Backend de uma plataforma SaaS de gestão de haras (plantel, reprodução, estoque, leilões, faturamento e cobrança) com APIs REST em C#, ASP.NET Core (.NET 10), Entity Framework Core e SQL Server.",
             "Arquitetura multi-tenant em que cada cliente tem seu próprio banco de dados.",
@@ -159,6 +161,7 @@
           role: "Desenvolvedor Full Stack Sênior",
           company: "KaBuM!",
           period: "fev. 2021 · set. 2026",
+          start: "2021-02", end: "2026-09",
           bullets: [
             "APIs e serviços internos em Python, Node.js com TypeScript, NestJS e TypeORM, integrados a MySQL e Redis, num e-commerce com alto volume de requisições.",
             "Estabilidade e disponibilidade das aplicações, com monitoramento e investigação de incidentes via Datadog e Grafana.",
@@ -173,6 +176,7 @@
           role: "Desenvolvedor Full Stack .NET",
           company: "Data System",
           period: "abr. 2012 · jan. 2021",
+          start: "2012-04", end: "2021-01",
           bullets: [
             "Evolução dos módulos de vendas, PDV, estoque, financeiro, fiscal e relatórios do SIAC/USE, ERP para varejo e atacado de calçados e confecções, em C# com .NET Framework e WPF.",
             "Serviços WCF e migração de serviços legados para APIs REST com ASP.NET Web API; aplicações web com ASP.NET MVC.",
@@ -186,6 +190,7 @@
           role: "Analista de Sistemas / Suporte Técnico",
           company: "BrainSoft Informática",
           period: "out. 2009 · nov. 2011",
+          start: "2009-10", end: "2011-11",
           bullets: [
             "Sistemas para varejo em Delphi: PDV, controle de estoque, administração financeira e controle de frota, incluindo importação e exportação de dados fiscais.",
           ],
@@ -196,9 +201,9 @@
     education: {
       title: "Formação",
       items: [
-        { course: "Pós-graduação em Desenvolvimento de Aplicações Mobile", school: "Anhanguera Educacional", period: "2020 · 2021" },
-        { course: "Bacharelado em Ciência da Computação", school: "Anhanguera Educacional", period: "2012 · 2015" },
-        { course: "Técnico em Informática", school: "COTIL / UNICAMP", period: "2008 · 2009" },
+        { course: "Pós-graduação em Desenvolvimento de Aplicações Mobile", school: "Anhanguera Educacional", period: "2020 · 2021", start: "2020", end: "2021" },
+        { course: "Bacharelado em Ciência da Computação", school: "Anhanguera Educacional", period: "2012 · 2015", start: "2012", end: "2015" },
+        { course: "Técnico em Informática", school: "COTIL / UNICAMP", period: "2008 · 2009", start: "2008", end: "2009" },
       ],
       languagesTitle: "Idiomas",
       languages: [
@@ -244,6 +249,13 @@
       title: "Vamos conversar?",
       kicker: "contato",
       text: "Estou aberto a oportunidades como Desenvolvedor Backend ou Fullstack Sênior, remoto ou híbrido. Mande um e-mail ou me chame no LinkedIn.",
+      rolesTitle: "Cargos de interesse",
+      roles: ["Desenvolvedor Backend Sênior", "Desenvolvedor Full Stack Sênior", "Engenheiro de Software", "Analista de Desenvolvimento Sênior"],
+      availabilityTitle: "Disponibilidade",
+      availability: "Início imediato · Remoto ou híbrido (Limeira, SP)",
+      cvTitle: "Currículo em PDF",
+      cvPt: "Português",
+      cvEn: "Inglês",
       email: "E-mail",
       copy: "Copiar e-mail",
       copied: "Copiado!",
@@ -256,9 +268,10 @@
 
   const en = {
     htmlLang: "en-US",
+    summary: "Developer with " + years + " years of experience working with .NET/C#, Node.js with TypeScript and Python in high-volume e-commerce. Experience building and maintaining REST APIs, distributed systems and asynchronous processing, with SQL Server, MySQL, Redis, Docker and CI/CD pipelines on GitHub Actions and AWS, as well as monitoring and observability with Datadog and Grafana. Currently developing the backend of a SaaS management platform in .NET 10 and studying Go. I bring AI assistants into the development workflow, always critically reviewing what is generated. My work is guided by SOLID and Clean Architecture.",
     meta: {
-      title: "Adriano Barbosa | Senior Backend Developer",
-      description: "Senior Backend and Fullstack Developer with " + years + " years of experience in .NET, Node.js, Python and Go. Resume, portfolio and contact.",
+      title: "Adriano Olivares Barbosa | Senior Backend Developer · .NET, Node.js, Go",
+      description: "Senior Backend and Fullstack Developer (Software Engineer) with " + years + " years of experience in C#/.NET, Node.js/TypeScript, Python and Go. REST APIs, distributed systems and high-volume e-commerce. PDF resume, portfolio and contact.",
     },
     nav: { about: "About", skills: "Stack", experience: "Experience", projects: "Projects", articles: "Articles", contact: "Contact" },
     controls: {
@@ -274,7 +287,7 @@
       role: "Senior Backend Developer · Fullstack",
       tagline: years + " years building APIs, distributed systems and asynchronous processing with .NET, Node.js and Python. Now diving deep into Go and writing about what I learn.",
       ctaContact: "Let's talk",
-      ctaProjects: "See projects",
+      ctaCv: "Download resume",
       location: "Limeira, SP, Brazil · Remote or hybrid",
       codeRole: "Senior Backend",
       codeFocus: ["REST APIs", "Distributed systems", "Messaging"],
@@ -312,6 +325,7 @@
           role: ".NET Backend Developer",
           company: "Independent project (freelance)",
           period: "Mar 2026 · Present",
+          start: "2026-03", end: null,
           bullets: [
             "Backend for a SaaS platform for horse breeding farm management (herd, breeding, inventory, auctions, invoicing and billing) with REST APIs in C#, ASP.NET Core (.NET 10), Entity Framework Core and SQL Server.",
             "Multi-tenant architecture in which each customer has its own database.",
@@ -324,6 +338,7 @@
           role: "Senior Full Stack Developer",
           company: "KaBuM!",
           period: "Feb 2021 · Sep 2026",
+          start: "2021-02", end: "2026-09",
           bullets: [
             "Internal APIs and services in Python, Node.js with TypeScript, NestJS and TypeORM, integrated with MySQL and Redis, in a high-traffic e-commerce environment.",
             "Application stability and availability, with monitoring and incident investigation through Datadog and Grafana.",
@@ -338,6 +353,7 @@
           role: "Full Stack .NET Developer",
           company: "Data System",
           period: "Apr 2012 · Jan 2021",
+          start: "2012-04", end: "2021-01",
           bullets: [
             "Evolution of the sales, POS, inventory, financial, tax and reporting modules of SIAC/USE, an ERP for footwear and clothing retail and wholesale, in C# with .NET Framework and WPF.",
             "WCF services and migration of legacy services to REST APIs with ASP.NET Web API; web applications with ASP.NET MVC.",
@@ -351,6 +367,7 @@
           role: "Systems Analyst / Technical Support",
           company: "BrainSoft Informática",
           period: "Oct 2009 · Nov 2011",
+          start: "2009-10", end: "2011-11",
           bullets: [
             "Retail systems in Delphi: POS, inventory control, financial administration and fleet management, including import and export of tax data.",
           ],
@@ -361,9 +378,9 @@
     education: {
       title: "Education",
       items: [
-        { course: "Postgraduate Degree in Mobile Application Development", school: "Anhanguera Educacional", period: "2020 · 2021" },
-        { course: "Bachelor's Degree in Computer Science", school: "Anhanguera Educacional", period: "2012 · 2015" },
-        { course: "Technical Degree in Information Technology", school: "COTIL / UNICAMP", period: "2008 · 2009" },
+        { course: "Postgraduate Degree in Mobile Application Development", school: "Anhanguera Educacional", period: "2020 · 2021", start: "2020", end: "2021" },
+        { course: "Bachelor's Degree in Computer Science", school: "Anhanguera Educacional", period: "2012 · 2015", start: "2012", end: "2015" },
+        { course: "Technical Degree in Information Technology", school: "COTIL / UNICAMP", period: "2008 · 2009", start: "2008", end: "2009" },
       ],
       languagesTitle: "Languages",
       languages: [
@@ -409,6 +426,13 @@
       title: "Let's talk?",
       kicker: "contact",
       text: "I'm open to Senior Backend or Fullstack Developer roles, remote or hybrid. Send me an email or reach out on LinkedIn.",
+      rolesTitle: "Target roles",
+      roles: ["Senior Backend Developer", "Senior Full Stack Developer", "Software Engineer", "Senior Backend Engineer"],
+      availabilityTitle: "Availability",
+      availability: "Immediate start · Remote or hybrid (Limeira, SP, Brazil)",
+      cvTitle: "PDF resume",
+      cvPt: "Portuguese",
+      cvEn: "English",
       email: "Email",
       copy: "Copy email",
       copied: "Copied!",

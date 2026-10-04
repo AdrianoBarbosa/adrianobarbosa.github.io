@@ -30,10 +30,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: ./scripts/update-repos.sh "${{ github.repository_owner }}" || echo "Falhou, mantendo o repos.json versionado"
 
-      - name: Monta o site
-        run: |
-          mkdir _site
-          cp -r index.html favicon.svg .nojekyll assets data _site/
+      - name: Monta e pré-renderiza o site
+        env:
+          CHROME: google-chrome
+        run: python3 scripts/build.py
 
       - uses: actions/configure-pages@v5
 

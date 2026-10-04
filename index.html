@@ -3,38 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adriano Barbosa | Desenvolvedor Backend Sênior</title>
-  <meta name="description" content="Desenvolvedor Backend Sênior e Fullstack com 17 anos de carreira em .NET, Node.js, Python e Go. Currículo, portfólio e contato." />
+  <!-- Título, descrição, canonical e JSON-LD são reescritos por scripts/build.py a partir de assets/js/i18n.js -->
+  <title>Adriano Olivares Barbosa | Desenvolvedor Backend Sênior · .NET, Node.js, Go</title>
+  <meta name="description" content="Desenvolvedor Backend Sênior e Fullstack com 17 anos de carreira em C#/.NET, Node.js/TypeScript, Python e Go." />
   <meta name="author" content="Adriano Olivares Barbosa" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#272822" />
   <link rel="canonical" href="https://adrianobarbosa.github.io/" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="alternate" hreflang="pt-BR" href="https://adrianobarbosa.github.io/" />
+  <link rel="alternate" hreflang="en-US" href="https://adrianobarbosa.github.io/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://adrianobarbosa.github.io/" />
+  <link rel="alternate" type="text/markdown" href="/resume.pt-BR.md" title="Currículo (Markdown, pt-BR)" />
+  <link rel="alternate" type="text/markdown" href="/resume.en-US.md" title="Resume (Markdown, en-US)" />
+  <link rel="alternate" type="application/json" href="/resume.en.json" title="JSON Resume" />
+  <link rel="me" href="https://www.linkedin.com/in/adrianoobarbosa" />
+  <link rel="me" href="https://github.com/AdrianoBarbosa" />
+  <link rel="me" href="mailto:adriano.barbosa90@gmail.com" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Adriano Barbosa | Desenvolvedor Backend Sênior" />
-  <meta property="og:description" content=".NET, Node.js, Python e Go. APIs REST, sistemas distribuídos e processamento assíncrono." />
+  <meta property="og:site_name" content="Adriano Olivares Barbosa" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:title" content="Adriano Olivares Barbosa | Desenvolvedor Backend Sênior · .NET, Node.js, Go" />
+  <meta property="og:description" content="Desenvolvedor Backend Sênior e Fullstack com 17 anos de carreira em C#/.NET, Node.js/TypeScript, Python e Go." />
   <meta property="og:url" content="https://adrianobarbosa.github.io/" />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/7115446?v=4&s=640" />
+  <meta property="profile:first_name" content="Adriano" />
+  <meta property="profile:last_name" content="Olivares Barbosa" />
   <meta name="twitter:card" content="summary" />
+  <!-- JSON-LD -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/themes.js"></script>
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/themes.js"></script>
   <script>
-    // Aplica tema e idioma antes do primeiro paint, evitando o flash de cores.
+    // Aplica o tema antes do primeiro paint, evitando o flash de cores.
+    // O idioma vem da rota: "/" é pt-BR e "/en/" é en-US. Quem escolheu inglês antes é levado para "/en/".
     (function () {
-      var mode = "system", lang = null;
-      try { mode = localStorage.getItem("mode") || "system"; lang = localStorage.getItem("lang"); } catch (e) {}
+      var root = document.documentElement, mode = "system", pref = null;
+      try { mode = localStorage.getItem("mode") || "system"; pref = localStorage.getItem("lang"); } catch (e) {}
+      if (pref === "en-US" && root.lang === "pt-BR" && location.pathname === "/") {
+        location.replace("/en/" + location.hash);
+      }
+      root.classList.add("js");
       window.THEMES.applyTheme(window.SITE_CONFIG.palette, mode);
-      if (!lang) lang = /^pt\b/i.test(navigator.language || "") ? "pt-BR" : "en-US";
-      document.documentElement.lang = lang;
     })();
   </script>
-  <script src="assets/js/i18n.js"></script>
+  <script src="/assets/js/i18n.js"></script>
 
   <script type="importmap">
     {
@@ -46,7 +66,7 @@
     }
   </script>
   <link rel="modulepreload" href="https://esm.sh/react@19.3.0" />
-  <script type="module" src="assets/js/app.js"></script>
+  <script type="module" src="/assets/js/app.js"></script>
 </head>
 <body>
   <div id="root">
@@ -56,7 +76,8 @@
         <p>Desenvolvedor Backend Sênior · Fullstack (.NET, Node.js, Python, Go)</p>
         <p><a href="mailto:adriano.barbosa90@gmail.com">adriano.barbosa90@gmail.com</a> ·
           <a href="https://www.linkedin.com/in/adrianoobarbosa">LinkedIn</a> ·
-          <a href="https://github.com/AdrianoBarbosa">GitHub</a></p>
+          <a href="https://github.com/AdrianoBarbosa">GitHub</a> ·
+          <a href="/cv/Adriano-Olivares-Barbosa-CV-pt-BR.pdf">Currículo (PDF)</a></p>
       </main>
     </noscript>
   </div>

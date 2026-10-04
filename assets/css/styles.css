@@ -94,15 +94,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
   display: inline-flex; padding: 3px; gap: 2px;
   background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
 }
-.segmented button {
+.segmented button, .segmented a {
   border: 0; background: transparent; color: var(--muted);
   font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700;
   height: 28px; min-width: 32px; padding: 0 8px; border-radius: 999px;
   display: inline-flex; align-items: center; justify-content: center;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-.segmented button:hover { color: var(--heading); }
-.segmented button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+.segmented button:hover, .segmented a:hover { color: var(--heading); text-decoration: none; }
+.segmented button[aria-pressed="true"], .segmented a[aria-current="page"] { background: var(--accent); color: var(--on-accent); }
 .segmented .icon-btn { padding: 0; width: 28px; min-width: 28px; }
 
 .menu-btn {
@@ -150,8 +150,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
   100% { box-shadow: 0 0 0 0 transparent; }
 }
 
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
-.reveal.in { opacity: 1; transform: none; }
+/* Só esconde para animar quando há JavaScript; o HTML pré-renderizado fica legível sem ele. */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
 
 /* ---------- hero ---------- */
 
@@ -195,7 +196,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   background: linear-gradient(120deg, var(--heading) 30%, var(--accent) 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.cursor { color: var(--accent); -webkit-text-fill-color: var(--accent); animation: blink 1.1s steps(1) infinite; margin-left: 2px; }
+.hero-name::after { content: "_"; color: var(--accent); -webkit-text-fill-color: var(--accent); animation: blink 1.1s steps(1) infinite; margin-left: 2px; }
 @keyframes blink { 50% { opacity: 0; } }
 .hero-role { color: var(--accent); font-size: clamp(0.95rem, 2vw, 1.1rem); font-weight: 500; margin-top: 10px; }
 .hero-tagline { font-size: 1.1rem; max-width: 560px; }
@@ -333,6 +334,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .email-link:hover { color: var(--accent); }
 .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.contact-facts {
+  display: grid; gap: 20px; margin: 32px 0 0; padding-top: 28px; border-top: 1px dashed var(--border); text-align: left;
+}
+.contact-facts > div { display: grid; grid-template-columns: 200px 1fr; gap: 12px; align-items: center; }
+.contact-facts dt { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 0.9rem; font-weight: 600; }
+.contact-facts dd { margin: 0; }
+.cv-links { display: flex; flex-wrap: wrap; gap: 8px; }
 .section#contact .section-head { margin-left: auto; margin-right: auto; text-align: center; }
 
 /* rodapé */
@@ -364,7 +372,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .container { padding: 0 16px; }
   .header-inner { gap: 12px; }
   .controls { gap: 6px; }
-  .segmented button { min-width: 28px; padding: 0 6px; }
+  .segmented button, .segmented a { min-width: 28px; padding: 0 6px; }
   .hero { padding-top: 40px; }
   .stats { grid-template-columns: 1fr; margin-top: 40px; }
   .section { padding: 64px 0; }
@@ -375,6 +383,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .timeline::before { left: 6px; }
   .code-body { font-size: 0.76rem; }
   .hero-cta .btn:not(.btn-icon) { flex: 1 1 auto; }
+  .contact-facts > div { grid-template-columns: 1fr; gap: 8px; }
 }
 
 @media (max-width: 380px) {
@@ -384,5 +393,5 @@ button { font: inherit; color: inherit; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .reveal { opacity: 1; transform: none; }
+  .js .reveal { opacity: 1; transform: none; }
 }
