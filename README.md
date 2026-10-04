@@ -8,9 +8,9 @@ Página pessoal de Adriano Olivares Barbosa, Desenvolvedor Backend Sênior e Ful
 
 ## Como funciona
 
-- React 19 carregado via CDN ([esm.sh](https://esm.sh)) com import map e [htm](https://github.com/developit/htm) no lugar do JSX. Não tem Node.js, bundler nem etapa de build: é só HTML, CSS e JavaScript estático.
+- React 19 carregado via CDN ([esm.sh](https://esm.sh)) com import map e [htm](https://github.com/developit/htm) no lugar do JSX. Não tem Node.js nem bundler: a página roda direto como HTML, CSS e JavaScript estático. O build em Python só pré-renderiza e gera os arquivos para máquinas.
 - Modo claro, escuro ou sistema, escolhido pelo visitante e salvo no navegador.
-- Português (pt-BR) e inglês (en-US), detectados pelo idioma do navegador e alternáveis no cabeçalho.
+- Português em `/` e inglês em `/en/`, alternáveis no cabeçalho. A escolha fica salva e leva o visitante direto para a versão preferida.
 - Portfólio lido de `data/repos.json`, gerado com o GitHub CLI a partir dos repositórios públicos.
 - Currículo em PDF para download, em português e inglês.
 
@@ -86,7 +86,7 @@ O workflow `.github/workflows/pages.yml` publica no GitHub Pages a cada push na 
 
 Personal page of Adriano Olivares Barbosa, Senior Backend and Fullstack Developer.
 
-- React 19 via CDN (esm.sh) with an import map and htm instead of JSX. No Node.js, no bundler, no build step.
+- React 19 via CDN (esm.sh) with an import map and htm instead of JSX. No Node.js, no bundler; the Python build only prerenders and generates machine-readable files.
 - Light, dark or system mode, plus Portuguese (`/`) and English (`/en/`).
 - Downloadable PDF resume in both languages.
 - Machine-readable for search engines, ATS and AI agents: prerendered HTML, schema.org JSON-LD, `/llms.txt`, Markdown resumes and JSON Resume, all generated from `assets/js/i18n.js` by `scripts/build.py`.
