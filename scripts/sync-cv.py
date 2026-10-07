@@ -14,9 +14,9 @@ SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT.parent.parent / "resumes"
 KEYWORDS = "Senior Full Stack Developer, Backend, Software Engineer, C#, .NET, ASP.NET Core, Node.js, TypeScript, NestJS, Python, Go, Golang, REST APIs, Distributed Systems, SQL Server, MySQL, Redis, Docker, AWS, GitHub Actions"
 
 FILES = [
-    ("Adriano_Olivares_Barbosa_CV.pdf", "Adriano-Olivares-Barbosa-CV-pt-BR.pdf",
+    ("Adriano_Olivares_Barbosa.pdf", "Adriano-Olivares-Barbosa-CV-pt-BR.pdf",
      "Adriano Olivares Barbosa | Currículo | Desenvolvedor Full Stack Sênior", "Currículo de Desenvolvedor Full Stack e Backend Sênior"),
-    ("Adriano_Olivares_Barbosa_CV_EN.pdf", "Adriano-Olivares-Barbosa-CV-en-US.pdf",
+    ("Adriano_Olivares_Barbosa_EN.pdf", "Adriano-Olivares-Barbosa-CV-en-US.pdf",
      "Adriano Olivares Barbosa | Resume | Senior Full Stack Developer", "Senior Full Stack and Backend Developer resume"),
 ]
 
