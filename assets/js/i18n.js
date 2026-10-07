@@ -81,7 +81,7 @@
     { key: "dotnet", items: [".NET 10 / 8 / 6", "ASP.NET Core", "ASP.NET MVC", "Web API", "Entity Framework Core", "Dapper", "ADO.NET", "WPF", "WCF", "Hangfire"] },
     { key: "node", items: ["Node.js", "NestJS", "TypeORM", "Express"] },
     { key: "data", items: ["SQL Server", "MySQL", "Redis", "Firebird"] },
-    { key: "infra", items: ["Docker", "Podman", "GitHub Actions", "AWS", "Azure", "Linux", "Git"] },
+    { key: "infra", items: ["Docker", "Podman", "GitHub Actions", "AWS", "SQS", "Azure", "Linux", "Git"] },
     { key: "observability", items: ["Datadog", "Grafana"] },
     { key: "architecture", items: ["REST APIs", "Microservices", "Distributed Systems", "Async Processing", "Multi-tenant", "SOLID", "Clean Architecture"] },
     { key: "frontend", items: ["Angular", "React", "HTML", "CSS"] },
