@@ -167,7 +167,7 @@ function CodeWindow({ t }) {
     [...field("Name", 6), s("Adriano Barbosa"), p(",")],
     [...field("Role", 6), s(t.hero.codeRole), p(",")],
     [...field("Since", 5), n(CFG.careerStart), p(",")],
-    [...field("Stack", 5), p("[]"), ty("string"), p("{"), s("C#"), p(", "), s("TS"), p(", "), s("Python"), p(", "), s("Go"), p("},")],
+    [...field("Stack", 5), p("[]"), ty("string"), p("{"), s("C#"), p(", "), s("NodeJS"), p(", "), s("Python"), p(", "), s("Go"), p("},")],
     [...field("Focus", 5), p("[]"), ty("string"), p("{")],
     ...t.hero.codeFocus.map((x) => [p("\t\t"), s(x), p(",")]),
     [p("\t},")],
