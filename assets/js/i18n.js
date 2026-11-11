@@ -254,7 +254,7 @@
     articles: {
       title: "Artigos",
       kicker: "cat articles/*.md",
-      intro: "Uma série no LinkedIn sobre o que um dev sênior de .NET e Node.js aprende ao estudar Go. Cada artigo compara as três plataformas e tem código aberto no GitHub.",
+      intro: "Artigos no LinkedIn, a maioria de uma série sobre o que um dev sênior de .NET e Node.js aprende ao estudar Go, comparando as três plataformas. Todos têm código aberto no GitHub.",
       items: [
         {
           title: "Três jeitos de esperar: event loop, async/await e goroutines",
@@ -265,6 +265,12 @@
           title: "context.Context vs CancellationToken: quem avisa que já pode parar",
           summary: "Cancelamento em Node.js, .NET e Go: timeout, propagação, cascata e as armadilhas de cada modelo.",
           repo: "abortsignal-cancellationtoken-context",
+        },
+        {
+          title: "Docker vs Podman: por que troquei a baleia pela foca",
+          summary: "O que muda no dia a dia ao trocar de runtime: rootless, daemon, compose nos dois, ambiente misto e banco como serviço do systemd com Quadlet.",
+          repo: "docker-vs-podman",
+          url: "https://www.linkedin.com/pulse/docker-vs-podman-por-que-troquei-baleia-pela-foca-da-adriano-lvsge/",
         },
       ],
       read: "Ler no LinkedIn",
@@ -431,7 +437,7 @@
     articles: {
       title: "Articles",
       kicker: "cat articles/*.md",
-      intro: "A LinkedIn series (in Portuguese) about what a senior .NET and Node.js developer learns while studying Go. Each article compares the three platforms and comes with open source code.",
+      intro: "LinkedIn articles (in Portuguese), most of them from a series about what a senior .NET and Node.js developer learns while studying Go, comparing the three platforms. All of them come with open source code.",
       items: [
         {
           title: "Three ways to wait: event loop, async/await and goroutines",
@@ -442,6 +448,12 @@
           title: "context.Context vs CancellationToken: who says it's time to stop",
           summary: "Cancellation in Node.js, .NET and Go: timeouts, propagation, cascading and the pitfalls of each model.",
           repo: "abortsignal-cancellationtoken-context",
+        },
+        {
+          title: "Docker vs Podman: why I traded the whale for the seal",
+          summary: "What changes day to day when switching runtimes: rootless, no daemon, compose on both, a mixed setup and the database as a systemd service with Quadlet.",
+          repo: "docker-vs-podman",
+          url: "https://www.linkedin.com/pulse/docker-vs-podman-por-que-troquei-baleia-pela-foca-da-adriano-lvsge/",
         },
       ],
       read: "Read on LinkedIn",

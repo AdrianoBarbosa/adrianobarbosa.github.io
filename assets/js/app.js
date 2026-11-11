@@ -409,7 +409,7 @@ function Articles({ t }) {
             <h3>${a.title}</h3>
             <p>${a.summary}</p>
             <div class="repo-links">
-              <a href=${CFG.articles} target="_blank" rel="noopener"><${Icon} name="linkedin" size=${15} />${t.articles.read}</a>
+              <a href=${a.url || CFG.articles} target="_blank" rel="noopener"><${Icon} name="linkedin" size=${15} />${t.articles.read}</a>
               <a href=${`${CFG.github}/${a.repo}`} target="_blank" rel="noopener"><${Icon} name="github" size=${15} />${t.articles.code}</a>
             </div>
           <//>`)}

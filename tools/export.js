@@ -72,7 +72,7 @@
         recognizedBy: { "@type": "EducationalOrganization", name: e.school },
         dateCreated: e.end,
       })),
-      subjectOf: t.articles.items.map((a) => ({ "@type": "Article", headline: a.title, abstract: a.summary, url: CFG.articles, inLanguage: "pt-BR" })),
+      subjectOf: t.articles.items.map((a) => ({ "@type": "Article", headline: a.title, abstract: a.summary, url: a.url || CFG.articles, inLanguage: "pt-BR" })),
       owns: curatedProjects(repos, lang).map((r) => ({
         "@type": "SoftwareSourceCode",
         name: r.name,
@@ -213,7 +213,7 @@
     );
     curatedProjects(repos, "en-US").forEach((r) => out.push(`- [${r.name}](${r.url})${r.desc ? ": " + r.desc : ""}`));
     out.push("", "## Articles (LinkedIn, in Portuguese)", "");
-    en.articles.items.forEach((a) => out.push(`- [${a.title}](${CFG.articles}): ${a.summary} Code: ${CFG.github}/${a.repo}`));
+    en.articles.items.forEach((a) => out.push(`- [${a.title}](${a.url || CFG.articles}): ${a.summary} Code: ${CFG.github}/${a.repo}`));
     out.push("");
     return out.join("\n");
   }
